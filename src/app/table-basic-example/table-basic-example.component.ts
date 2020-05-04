@@ -29,7 +29,6 @@ export class TableBasicExampleComponent implements OnInit {
     setTimeout(() => {
       this.dataSource = new MatTableDataSource<any>(this.myservice.fetchMockScenarioes());
       this.displayedColumns = ['Business Object', 'Name', 'Area', 'Type', 'Readiness', 'Created By', 'Created On'];
-      console.log(this.dataSource)
       this.dataSource.paginator = this.paginator
     });
   }

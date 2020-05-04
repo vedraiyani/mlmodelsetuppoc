@@ -7,9 +7,8 @@ import MockScenarios from '../assets/MockScenarios.json';
 export class MyserviceService {
 
   constructor() {
-    // console.log('Reading local json files');
-    // console.log(MockScenarios);
   }
+
   fetchMockScenarioes(){
     return MockScenarios;
   }
