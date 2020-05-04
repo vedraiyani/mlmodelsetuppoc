@@ -1,0 +1,101 @@
+[
+  {
+    "Business Object": "Account",
+    "Name": "Account Intelligence",
+    "Area": "Sales",
+    "Type": "Scoring",
+    "Readiness": "Not Supported",
+    "Created By": "Arjun Karat",
+    "Created On": "14.11.2017 12:30 AM CET"
+  },
+  {
+    "Business Object": "Account",
+    "Name": "Product Recommendation",
+    "Area": "Sales",
+    "Type": "Recommender",
+    "Readiness": "Not Supported",
+    "Created By": "Dr. CRM MIDDLE long name OPS",
+    "Created On": "02.02.2018 5:16 AM CET"
+  },
+  {
+    "Business Object": "Lead",
+    "Name": "Lead Scoring",
+    "Area": "Sales",
+    "Type": "Scoring",
+    "Readiness": "",
+    "Created By": "Prajesh K",
+    "Created On": "26.08.2017 2:25 AM CET"
+  },
+  {
+    "Business Object": "Opportunity",
+    "Name": "Opportunity Scoring",
+    "Area": "Sales",
+    "Type": "Scoring",
+    "Readiness": "View Report",
+    "Created By": "ABC DEF",
+    "Created On": "01.03.2018 11:40 PM CET"
+  },
+  {
+    "Business Object": "Opportunity",
+    "Name": "Opportunity Closing Date Prediction",
+    "Area": "Sales",
+    "Type": "Regression",
+    "Readiness": "Not Supported",
+    "Created By": "Prajesh K",
+    "Created On": "17.07.2018 8:14 PM CET"
+  },
+  {
+    "Business Object": "Ticket",
+    "Name": "Similar Ticket Recommendation",
+    "Area": "Service",
+    "Type": "Recommender",
+    "Readiness": "Not Supported",
+    "Created By": "Prajesh K",
+    "Created On": "20.01.2018 9:08 PM CET"
+  },
+  {
+    "Business Object": "Ticket",
+    "Name": "Ticket Time to Completion",
+    "Area": "Service",
+    "Type": "Classifier",
+    "Readiness": "View Report",
+    "Created By": "Dr. CRM MIDDLE long name OPS",
+    "Created On": "22.01.2019 7:34 PM CET"
+  },
+  {
+    "Business Object": "Ticket",
+    "Name": "Machine Translation",
+    "Area": "Service",
+    "Type": "Natural Language Processing",
+    "Readiness": "Not Supported",
+    "Created By": "Arjun Karat",
+    "Created On": "22.04.2019 8:55 PM CET"
+  },
+  {
+    "Business Object": "Ticket",
+    "Name": "Ticket Categorization",
+    "Area": "Service",
+    "Type": "Classifier",
+    "Readiness": "View Report",
+    "Created By": "Dr. CRM MIDDLE long name OPS",
+    "Created On": "08.10.2019 1:45 AM CET"
+  },
+  {
+    "Business Object": "Ticket",
+    "Name": "Email Template Recommendation",
+    "Area": "Service",
+    "Type": "Recommender",
+    "Readiness": "View Report",
+    "Created By": "Eddie Smoke",
+    "Created On": "19.04.2019 12:54 AM CET"
+  },
+  {
+    "Business Object": "Ticket",
+    "Name": "Ticket NLP Classification",
+    "Area": "Service",
+    "Type": "Natural Language Processing",
+    "Readiness": "Not Supported",
+    "Created By": "Dr. CRM MIDDLE long name OPS",
+    "Created On": "23.01.2019 8:13 PM CET"
+  }
+]
