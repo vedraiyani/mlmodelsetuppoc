@@ -50,9 +50,11 @@
     </ng-container>
 
     <tr mat-header-row *matHeaderRowDef="displayedColumns; sticky: true"></tr>
-    <tr mat-row *matRowDef="let row; columns: displayedColumns;" [ngClass]="{'highlight': selectedRowIndex == row.id}"
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;" [ngClass]="{'highlight': (selectedRow!=undefined && selectedRow.index == row.index)}"
          (click)="highlight(row)"></tr>
   </table>
 
   <mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons></mat-paginator>
 </div>
+<!-- <table-model *ngIf="selectedRow!=undefined" [Scenario]="selectedRow">loading2</table-model> -->
+<table-model [Scenario]="selectedRow">loading2</table-model>

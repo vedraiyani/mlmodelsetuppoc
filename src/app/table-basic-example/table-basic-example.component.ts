@@ -17,7 +17,7 @@ import { MyserviceService } from '../myservice.service';
 export class TableBasicExampleComponent implements OnInit {
   displayedColumns: string[];
   dataSource : MatTableDataSource<any>;
-  selectedRowIndex: number = -1;
+  selectedRow: any;
 
   @ViewChild(MatPaginator, {static: true}) paginator: MatPaginator;
   @ViewChild(MatSort, {static: true}) sort: MatSort;
@@ -31,7 +31,7 @@ export class TableBasicExampleComponent implements OnInit {
         // var obj: {[k: string]: any} = ele;
         // obj.id = index;
         // return obj;
-        ele['id']=index;
+        ele['index']=index;
         return ele;
       }));
       this.displayedColumns = ['Business Object', 'Name', 'Area', 'Type', 'Readiness', 'Created By', 'Created On'];
@@ -46,6 +46,6 @@ export class TableBasicExampleComponent implements OnInit {
   }
 
   highlight(row){
-      this.selectedRowIndex = row.id;
+      this.selectedRow = row;
   }
 }
