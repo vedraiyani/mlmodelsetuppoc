@@ -25,15 +25,8 @@ export class TableBasicExampleComponent implements OnInit {
   constructor(private myservice: MyserviceService){ }
 
   ngOnInit() {
-
     setTimeout(() => {
-      this.dataSource = new MatTableDataSource<any>(this.myservice.fetchMockScenarioes().map((ele,index)=>{
-        // var obj: {[k: string]: any} = ele;
-        // obj.id = index;
-        // return obj;
-        ele['index']=index;
-        return ele;
-      }));
+      this.dataSource = new MatTableDataSource<any>(this.myservice.fetchMockScenarioes());
       this.displayedColumns = ['Business Object', 'Name', 'Area', 'Type', 'Readiness', 'Created By', 'Created On'];
       this.dataSource.paginator = this.paginator;
       this.dataSource.sort = this.sort;
@@ -50,13 +43,7 @@ export class TableBasicExampleComponent implements OnInit {
   }
 
   refresh(){
-    this.dataSource.data = this.myservice.fetchMockScenarioes().map((ele,index)=>{
-        // var obj: {[k: string]: any} = ele;
-        // obj.id = index;
-        // return obj;
-        ele['index']=index;
-        return ele;
-      });
+    this.dataSource.data = this.myservice.fetchMockScenarioes();
   }
 
   openMLDocumentation(){

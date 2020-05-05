@@ -8,7 +8,9 @@ import { MatInputModule } from '@angular/material/input';
 import { MatIconModule } from '@angular/material/icon'
 import { MatButtonModule } from '@angular/material/button';
 import { MatTooltipModule } from '@angular/material/tooltip';
-
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+import { MatProgressBarModule } from '@angular/material/progress-bar';
+ 
 @NgModule({
    imports: [],
    exports: [
@@ -19,7 +21,9 @@ import { MatTooltipModule } from '@angular/material/tooltip';
     MatInputModule,
     MatIconModule,
     MatButtonModule,
-    MatTooltipModule
+    MatTooltipModule,
+    MatProgressSpinnerModule,
+    MatProgressBarModule
    ],
    providers: []
 })

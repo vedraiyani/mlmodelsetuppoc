@@ -1,6 +1,10 @@
 <p *ngIf="Scenario!=undefined">table-model works!{{Scenario!=undefined && Scenario.index}}</p>
 <div class="mat-elevation-z8">
 
+  <div class="table-header-titles">
+      Models ({{dataSource&&dataSource.data.length}})
+  </div>
+
   <mat-form-field>
     <mat-label>Filter</mat-label>
     <input matInput (keyup)="applyFilter($event)" placeholder="Ex. ium">
@@ -8,43 +12,60 @@
 
   <table mat-table [dataSource]="dataSource" matSort #ModelSort="matSort" matSortActive="Created On" matSortDirection="desc" matSortDisableClear>
     
-    <!-- BO Column -->
-    <ng-container matColumnDef="Business Object">
-      <th mat-header-cell *matHeaderCellDef mat-sort-header> Business Object </th>
-      <td mat-cell *matCellDef="let element"> {{element['Business Object']}} </td>
-    </ng-container>
-
     <!-- Name Column -->
     <ng-container matColumnDef="Name">
       <th mat-header-cell *matHeaderCellDef mat-sort-header> Name </th>
       <td mat-cell *matCellDef="let element"> {{element['Name']}} </td>
     </ng-container>
-
-    <!-- Area Column -->
-    <ng-container matColumnDef="Area">
-      <th mat-header-cell *matHeaderCellDef mat-sort-header> Area </th>
-      <td mat-cell *matCellDef="let element"> {{element['Area']}} </td>
+    
+    <!-- Status Column -->
+    <ng-container matColumnDef="Status">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> Status </th>
+      <td mat-cell *matCellDef="let element"> {{element['Status']}} </td>
     </ng-container>
 
-    <!-- Type Column -->
-    <ng-container matColumnDef="Type">
-      <th mat-header-cell *matHeaderCellDef mat-sort-header> Type </th>
-      <td mat-cell *matCellDef="let element"> {{element['Type']}} </td>
+    <!-- Data Source Column -->
+    <ng-container matColumnDef="Data Source">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> Data Source </th>
+      <td mat-cell *matCellDef="let element"> {{element['Data Source']}} </td>
+    </ng-container>
+    
+    <!-- Action Column -->
+    <!-- <ng-container matColumnDef="index">
+      <th mat-header-cell> Action </th>
+      <td mat-cell *matCellDef="let element">{{element['index']}}</td>
+    </ng-container> -->
+    <ng-container matColumnDef="Action">
+      <th mat-header-cell *matHeaderCellDef> Action </th>
+      <td mat-cell *matCellDef="let element"> 
+        <button mat-icon-button color="primary" matTooltip="Copy" aria-label="Copy" [disabled]="element['Status']!=='Active'">
+          <mat-icon>file_copy</mat-icon>
+        </button>
+        <button mat-icon-button color="primary" matTooltip="Delete" aria-label="Delete" (click)="deleteModel(element)" [disabled]="element['Status']==='Active'">
+          <mat-icon>delete</mat-icon>
+        </button>  
+      </td>
     </ng-container>
 
-    <!-- Readiness Column -->
-    <ng-container matColumnDef="Readiness">
-      <th mat-header-cell *matHeaderCellDef mat-sort-header> Readiness </th>
-      <td mat-cell *matCellDef="let element"> {{element['Readiness']}} </td>
+    <!-- Training progress Column -->
+    <ng-container matColumnDef="Training progress">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> Training progress </th>
+      <td mat-cell *matCellDef="let element"> <mat-progress-bar mode="determinate" color="primary" [value]="element['Training progress']"></mat-progress-bar>{{element['Training progress']}}%</td>
+    </ng-container>
+
+    <!-- Accuracy Column -->
+    <ng-container matColumnDef="Accuracy">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> Accuracy </th>
+      <td mat-cell *matCellDef="let element"> <mat-progress-bar mode="determinate" [color]="detAccuracyColor(element['Accuracy'])" [value]="element['Accuracy']"></mat-progress-bar>{{element['Accuracy']}}% </td>
+    </ng-container>
+
+    <!-- Last Updated Column -->
+    <ng-container matColumnDef="Last Updated">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> Last Updated </th>
+      <td mat-cell *matCellDef="let element"> {{element['Last Updated']}} </td>
     </ng-container>
 
     <!-- Created By Column -->
-    <ng-container matColumnDef="Created By">
-      <th mat-header-cell *matHeaderCellDef mat-sort-header> Created By </th>
-      <td mat-cell *matCellDef="let element"> {{element['Created By']}} </td>
-    </ng-container>
-
-    <!-- Created On Column -->
     <ng-container matColumnDef="Created On">
       <th mat-header-cell *matHeaderCellDef mat-sort-header> Created On </th>
       <td mat-cell *matCellDef="let element"> {{element['Created On']}} </td>

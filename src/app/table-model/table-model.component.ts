@@ -29,13 +29,7 @@ export class TableModelComponent implements OnInit {
   set Scenario(scenario: any) {
     this._scenario = scenario;
     if(scenario!=undefined){
-      this.dataSource.data = this.myservice.fetchMockScenarioes().map((ele,index)=>{
-        ele['index']=index;
-        return ele;
-      }).slice(0,scenario.index+1);
-      // this.displayedColumns = ['Business Object', 'Name', 'Area', 'Type', 'Readiness', 'Created By', 'Created On'];
-      // this.dataSource.paginator = this.modelpaginator;
-      // this.dataSource.sort = this.modelsort;
+      this.refreshDataSource();
     }
   }
 
@@ -43,11 +37,7 @@ export class TableModelComponent implements OnInit {
 
   ngOnInit() {
     setTimeout(() => {
-      // this.dataSource.data = this.myservice.fetchMockScenarioes().map((ele,index)=>{
-      //   ele['index']=index;
-      //   return ele;
-      // });
-      this.displayedColumns = ['Business Object', 'Name', 'Area', 'Type', 'Readiness', 'Created By', 'Created On'];
+      this.displayedColumns = ["Name", "Status", "Data Source", "Action", "Training progress", "Accuracy", "Last Updated", "Created On"]
       this.dataSource.paginator = this.modelpaginator;
       this.dataSource.sort = this.modelsort;
     });
@@ -60,6 +50,27 @@ export class TableModelComponent implements OnInit {
 
   highlight(row){
       this.selectedRow = row;
+  }
+
+  detAccuracyColor(accuracy){
+    let acc:number = parseInt(accuracy);
+    if(acc > 85){
+      return 'primary';
+    }else if(acc < 85 && acc > 70){
+      return 'accent';
+    }else{
+      return 'warn';                
+    }
+  }
+  deleteModel(model:any){  
+    let that = this 
+    this.myservice.deleteModel(this.Scenario.index, model.index).then(()=>{
+      this.refreshDataSource();
+    });
+  }
+
+  refreshDataSource(){
+    this.dataSource.data = this.myservice.fetchModels(this.Scenario.Name);
   }
 
 }

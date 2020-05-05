@@ -80,5 +80,7 @@
 
   <mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons></mat-paginator>
 </div>
-<table-model *ngIf="selectedRow!=undefined" [Scenario]="selectedRow">loading2</table-model>
+<table-model *ngIf="selectedRow!=undefined" [Scenario]="selectedRow">
+  <mat-spinner></mat-spinner>
+</table-model>
 <!-- <table-model [Scenario]="selectedRow">loading2</table-model> -->
