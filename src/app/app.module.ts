@@ -6,6 +6,8 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatTableModule } from '@angular/material/table';
 import { MatPaginatorModule } from '@angular/material/paginator';
+import { MatSortModule } from '@angular/material/sort';
+import { MatInputModule } from '@angular/material/input';
 
 import { TableBasicExampleComponent } from './table-basic-example/table-basic-example.component';
 
@@ -23,7 +25,9 @@ import { TableModelComponent } from './table-model/table-model.component';
     AppRoutingModule,
     BrowserAnimationsModule,
     MatTableModule,
-    MatPaginatorModule
+    MatPaginatorModule,
+    MatSortModule,
+    MatInputModule
   ],
   providers: [MyserviceService],
   bootstrap: [AppComponent]
