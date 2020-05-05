@@ -48,4 +48,19 @@ export class TableBasicExampleComponent implements OnInit {
   highlight(row){
       this.selectedRow = row;
   }
+
+  refresh(){
+    this.dataSource.data = this.myservice.fetchMockScenarioes().map((ele,index)=>{
+        // var obj: {[k: string]: any} = ele;
+        // obj.id = index;
+        // return obj;
+        ele['index']=index;
+        return ele;
+      });
+  }
+
+  openMLDocumentation(){
+    let url: string = 'http://219.90.67.154/report-service/quicktask/TCPDF/examples/test-tcpdf.php?loggedinuser=';
+    window.open(url, '_blank');
+  }
 }
