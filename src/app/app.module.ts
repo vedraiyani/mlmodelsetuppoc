@@ -10,11 +10,13 @@ import { MatPaginatorModule } from '@angular/material/paginator';
 import { TableBasicExampleComponent } from './table-basic-example/table-basic-example.component';
 
 import { MyserviceService } from './myservice.service';
+import { TableModelComponent } from './table-model/table-model.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    TableBasicExampleComponent
+    TableBasicExampleComponent,
+    TableModelComponent
   ],
   imports: [
     BrowserModule,
