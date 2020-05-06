@@ -12,7 +12,7 @@ import { MyserviceService } from '../myservice.service';
 @Component({
   selector: 'table-basic-example',
   templateUrl: './table-basic-example.component.html',
-  styleUrls: ['./table-basic-example.component.sass']
+  styleUrls: ['./table-basic-example.component.scss']
 })
 export class TableBasicExampleComponent implements OnInit {
   displayedColumns: string[];

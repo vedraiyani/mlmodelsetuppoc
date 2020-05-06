@@ -8,7 +8,7 @@ import { MyserviceService } from '../myservice.service';
 @Component({
   selector: 'table-model',
   templateUrl: './table-model.component.html',
-  styleUrls: ['./table-model.component.sass']
+  styleUrls: ['./table-model.component.scss']
 })
 export class TableModelComponent implements OnInit {
 
@@ -22,7 +22,7 @@ export class TableModelComponent implements OnInit {
   @ViewChild('ModelSort', {static: true}) modelsort: MatSort;
 
   constructor(private myservice: MyserviceService){ }
-  
+
   private _scenario = '';
 
   @Input()
@@ -59,11 +59,11 @@ export class TableModelComponent implements OnInit {
     }else if(acc < 85 && acc > 70){
       return 'accent';
     }else{
-      return 'warn';                
+      return 'warn';
     }
   }
-  deleteModel(model:any){  
-    let that = this 
+  deleteModel(model:any){
+    let that = this
     this.myservice.deleteModel(this.Scenario.index, model.index).then(()=>{
       this.refreshDataSource();
     });

@@ -1,0 +1,21 @@
+table {
+	width: 100%;
+}
+
+th.mat-sort-header-sorted {
+	color: black;
+}
+
+.mat-form-field {
+	font-size: 14px;
+	float: right;
+}
+
+.highlight {
+	background: #afd5ed;
+}
+
+.mat-table .mat-row:hover {
+	background: #edf5fa;
+	cursor: pointer;
+}
