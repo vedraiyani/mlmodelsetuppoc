@@ -11,12 +11,14 @@ import { TableBasicExampleComponent } from './table-basic-example/table-basic-ex
 
 import { MyserviceService } from './myservice.service';
 import { TableModelComponent } from './table-model/table-model.component';
+import { ScenarioTableComponent } from './scenario-table/scenario-table.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     TableBasicExampleComponent,
-    TableModelComponent
+    TableModelComponent,
+    ScenarioTableComponent
   ],
   imports: [
     BrowserModule,
