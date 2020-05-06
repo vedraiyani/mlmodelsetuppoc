@@ -70,7 +70,7 @@ export class TableModelComponent implements OnInit {
   }
 
   refreshDataSource(){
-    this.dataSource.data = this.myservice.fetchModels(this.Scenario.Name);
+    this.dataSource.data = this.myservice.fetchModels(this.Scenario.name);
   }
 
 }
