@@ -5,6 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AngularMaterialModule } from './angular-material.module';
+import { PrimeNGModule } from './primeng.module';
 
 import { TableBasicExampleComponent } from './table-basic-example/table-basic-example.component';
 
@@ -21,7 +22,8 @@ import { TableModelComponent } from './table-model/table-model.component';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    AngularMaterialModule
+    AngularMaterialModule,
+    PrimeNGModule
   ],
   providers: [MyserviceService],
   bootstrap: [AppComponent]
