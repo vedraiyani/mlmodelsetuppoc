@@ -1,10 +1,13 @@
-import { Component, OnInit, Input } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 
-import { Car } from '../domain/car';
 import { Scenario } from '../domain/scenario';
 import { MyserviceService } from '../myservice.service';
 
 import { LazyLoadEvent } from 'primeng/api';
+
+/**
+ * @title List All the ML Scenarios
+ */
 
 @Component({
   selector: 'scenario-table',
@@ -13,10 +16,10 @@ import { LazyLoadEvent } from 'primeng/api';
 })
 export class ScenarioTableComponent implements OnInit {
 
-  cars: Scenario[];
+  scenarios: Scenario[];
   cols: any[];
   multiSortMeta: any[];
-  selectedCar3: Scenario;
+  selectedScenario: Scenario;
   loading: boolean;
   _selectedColumns: any[];
   exportColumns: any[];
@@ -26,7 +29,7 @@ export class ScenarioTableComponent implements OnInit {
   ngOnInit() {
     this.loading = true;
     setTimeout(() => {
-      this.cars = this.myService.fetchMockImpScenarioes();//this.myService.getCarsMedium();
+      this.scenarios = this.myService.fetchMockImpScenarioes();//this.myService.getCarsMedium();
         this.loading = false;
     }, 5000);
     // this.cars = this.myService.getCarsMedium();//.then(cars => this.cars = cars);
@@ -56,7 +59,8 @@ export class ScenarioTableComponent implements OnInit {
 
   onRowSelect(event) {
     // this.messageService.add({severity:'info', summary:'Car Selected', detail:'Vin: ' + event.data.vin});
-    console.log(event)
+    this.selectedScenario = event.data;
+    // console.log(event)
   }
 
   onRowUnselect(event) {
@@ -81,44 +85,5 @@ export class ScenarioTableComponent implements OnInit {
   //     //restore original order
   //     this._selectedColumns = this.cols.filter(col => val.includes(col));
   // }
-
-  exportPdf() {
-      // import("jspdf").then(jsPDF => {
-      //     import("jspdf-autotable").then(x => {
-      //         const doc = new jsPDF.default(0,0);
-      //         doc.autoTable(this.exportColumns, this.cars);
-      //         doc.save('primengTable.pdf');
-      //     })
-      // })
-  }
-
-  exportExcel() {
-      // import("xlsx").then(xlsx => {
-      //     const worksheet = xlsx.utils.json_to_sheet(this.getCars());
-      //     const workbook = { Sheets: { 'data': worksheet }, SheetNames: ['data'] };
-      //     const excelBuffer: any = xlsx.write(workbook, { bookType: 'xlsx', type: 'array' });
-      //     this.saveAsExcelFile(excelBuffer, "primengTable");
-      // });
-  }
-
-  saveAsExcelFile(buffer: any, fileName: string): void {
-      // import("file-saver").then(FileSaver => {
-      //     let EXCEL_TYPE = 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet;charset=UTF-8';
-      //     let EXCEL_EXTENSION = '.xlsx';
-      //     const data: Blob = new Blob([buffer], {
-      //         type: EXCEL_TYPE
-      //     });
-      //     FileSaver.saveAs(data, fileName + '_export_' + new Date().getTime() + EXCEL_EXTENSION);
-      // });
-  }
-
-  getCars() {
-      let cars = [];
-      for(let car of this.cars) {
-          // car.year = car.year.toString();
-          cars.push(car);
-      }
-      return cars;
-  }
 
 }

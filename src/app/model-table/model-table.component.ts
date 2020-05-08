@@ -6,11 +6,11 @@ import {MatSort} from '@angular/material/sort';
 import { MyserviceService } from '../myservice.service';
 
 @Component({
-  selector: 'table-model',
-  templateUrl: './table-model.component.html',
-  styleUrls: ['./table-model.component.scss']
+  selector: 'model-table',
+  templateUrl: './model-table.component.html',
+  styleUrls: ['./model-table.component.scss']
 })
-export class TableModelComponent implements OnInit {
+export class ModelTableComponent implements OnInit {
 
   // @Input() Scenario: any;
 

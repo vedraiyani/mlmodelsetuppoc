@@ -7,18 +7,16 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AngularMaterialModule } from './angular-material.module';
 import { PrimeNGModule } from './primeng.module';
 
-import { TableBasicExampleComponent } from './table-basic-example/table-basic-example.component';
+import { ScenarioTableComponent } from './scenario-table/scenario-table.component';
 
 import { MyserviceService } from './myservice.service';
-import { TableModelComponent } from './table-model/table-model.component';
-import { ScenarioTableComponent } from './scenario-table/scenario-table.component';
+import { ModelTableComponent } from './model-table/model-table.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    TableBasicExampleComponent,
-    TableModelComponent,
-    ScenarioTableComponent
+    ScenarioTableComponent,
+    ModelTableComponent
   ],
   imports: [
     BrowserModule,

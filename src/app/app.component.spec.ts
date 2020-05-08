@@ -26,10 +26,17 @@ describe('AppComponent', () => {
     expect(app.title).toEqual('mlmodelsetuppoc');
   });
 
-  it('should render title', () => {
+  it('should render scenario-table', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement;
-    expect(compiled.querySelector('.content span').textContent).toContain('mlmodelsetuppoc app is running!');
+    expect(compiled.querySelector('scenario-table')).toBeTruthy();
   });
+
+  // it('should render title', () => {
+  //   const fixture = TestBed.createComponent(AppComponent);
+  //   fixture.detectChanges();
+  //   const compiled = fixture.nativeElement;
+  //   expect(compiled.querySelector('.content span').textContent).toContain('mlmodelsetuppoc app is running!');
+  // });
 });

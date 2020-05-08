@@ -1,0 +1,49 @@
+table {
+	width: 100%;
+}
+
+th.mat-sort-header-sorted {
+	color: black;
+}
+
+.table-header-fields {
+	font-size: 20px;
+}
+
+.table-header-titles {
+	float: left;
+	height: 100%;
+}
+
+.table-header-actions {
+	float: right;
+}
+
+.table-header-actions a {
+	margin: 5px;
+	color: #878ca2;
+	text-decoration: none;
+}
+
+.highlight {
+	background: #afd5ed;
+}
+
+.mat-table {
+	padding: 10px;
+}
+
+.mat-table .mat-row:hover {
+	background: #edf5fa;
+	cursor: pointer;
+}
+
+.mat-header-cell {
+	font-size: 20px;
+	background: #1794e3;
+}
+
+button {
+	display: table-cell;
+	margin-right: 8px;
+}

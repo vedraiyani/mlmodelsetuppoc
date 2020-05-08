@@ -1,21 +1,17 @@
-import {Component, OnInit} from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
+import { Car } from '../domain/car';
 import { Scenario } from '../domain/scenario';
 import { MyserviceService } from '../myservice.service';
 
 import { LazyLoadEvent } from 'primeng/api';
 
-/**
- * @title Basic use of `<table mat-table>`
- */
-
 @Component({
-  selector: 'table-basic-example',
-  templateUrl: './table-basic-example.component.html',
-  styleUrls: ['./table-basic-example.component.scss']
+  selector: 'demo-scenario-table',
+  templateUrl: './demo-scenario-table.component.html',
+  styleUrls: ['./demo-scenario-table.component.scss']
 })
-export class TableBasicExampleComponent implements OnInit {
-  selectedRow: Scenario;
+export class DemoScenarioTableComponent implements OnInit {
 
   cars: Scenario[];
   cols: any[];
@@ -60,8 +56,7 @@ export class TableBasicExampleComponent implements OnInit {
 
   onRowSelect(event) {
     // this.messageService.add({severity:'info', summary:'Car Selected', detail:'Vin: ' + event.data.vin});
-    this.selectedRow = event.data;
-    // console.log(event)
+    console.log(event)
   }
 
   onRowUnselect(event) {
@@ -125,4 +120,5 @@ export class TableBasicExampleComponent implements OnInit {
       }
       return cars;
   }
+
 }
