@@ -8,9 +8,14 @@ describe('workspace-project App', () => {
     page = new AppPage();
   });
 
-  it('should display welcome message', () => {
+  // it('should display welcome message', () => {
+  //   page.navigateTo();
+  //   expect(page.getTitleText()).toEqual('mlmodelsetuppoc app is running!');
+  // });
+
+  it('should display scenario table', () => {
     page.navigateTo();
-    expect(page.getTitleText()).toEqual('mlmodelsetuppoc app is running!');
+    expect(page.getScenarioElement().isPresent()).toBeTruthy();
   });
 
   afterEach(async () => {
