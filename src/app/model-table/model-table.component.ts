@@ -6,7 +6,7 @@ import {MatSort} from '@angular/material/sort';
 import { MyserviceService } from '../myservice.service';
 
 @Component({
-  selector: 'model-table',
+  selector: 'app-model-table',
   templateUrl: './model-table.component.html',
   styleUrls: ['./model-table.component.scss']
 })
@@ -15,7 +15,7 @@ export class ModelTableComponent implements OnInit {
   // @Input() Scenario: any;
 
   displayedColumns: string[];
-  dataSource : MatTableDataSource<any> = new MatTableDataSource<any>();
+  dataSource: MatTableDataSource<any> = new MatTableDataSource<any>();
   selectedRow: any;
 
   @ViewChild('ModelPaginator', {static: true, read: MatPaginator}) modelpaginator: MatPaginator;
@@ -23,21 +23,21 @@ export class ModelTableComponent implements OnInit {
 
   constructor(private myservice: MyserviceService){ }
 
-  private _scenario = '';
+  private scenario = '';
 
   @Input()
   set Scenario(scenario: any) {
-    this._scenario = scenario;
-    if(scenario!=undefined){
+    this.scenario = scenario;
+    if (scenario !== undefined){
       this.refreshDataSource();
     }
   }
 
-  get Scenario(): any { return this._scenario; }
+  get Scenario(): any { return this.scenario; }
 
   ngOnInit() {
     setTimeout(() => {
-      this.displayedColumns = ["Name", "Status", "Data Source", "Action", "Training progress", "Accuracy", "Last Updated", "Created On"]
+      this.displayedColumns = ['Name', 'Status', 'Data Source', 'Action', 'Training progress', 'Accuracy', 'Last Updated', 'Created On'];
       this.dataSource.paginator = this.modelpaginator;
       this.dataSource.sort = this.modelsort;
     });
@@ -53,18 +53,18 @@ export class ModelTableComponent implements OnInit {
   }
 
   detAccuracyColor(accuracy){
-    let acc:number = parseInt(accuracy);
-    if(acc > 85){
+    const acc: number = parseInt(accuracy, 10);
+    if (acc > 85){
       return 'primary';
-    }else if(acc < 85 && acc > 70){
+    }else if (acc < 85 && acc > 70){
       return 'accent';
     }else{
       return 'warn';
     }
   }
-  deleteModel(model:any){
-    let that = this
-    this.myservice.deleteModel(this.Scenario.index, model.index).then(()=>{
+  deleteModel(model: any){
+    const that = this;
+    this.myservice.deleteModel(this.Scenario.index, model.index).then(() => {
       this.refreshDataSource();
     });
   }

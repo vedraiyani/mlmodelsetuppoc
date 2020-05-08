@@ -30,7 +30,7 @@ describe('AppComponent', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement;
-    expect(compiled.querySelector('scenario-table')).toBeTruthy();
+    expect(compiled.querySelector('app-scenario-table')).toBeTruthy();
   });
 
   // it('should render title', () => {

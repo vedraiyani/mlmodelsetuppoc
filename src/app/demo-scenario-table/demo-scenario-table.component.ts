@@ -7,7 +7,7 @@ import { MyserviceService } from '../myservice.service';
 import { LazyLoadEvent } from 'primeng/api';
 
 @Component({
-  selector: 'demo-scenario-table',
+  selector: 'app-demo-scenario-table',
   templateUrl: './demo-scenario-table.component.html',
   styleUrls: ['./demo-scenario-table.component.scss']
 })
@@ -18,7 +18,7 @@ export class DemoScenarioTableComponent implements OnInit {
   multiSortMeta: any[];
   selectedCar3: Scenario;
   loading: boolean;
-  _selectedColumns: any[];
+  selectedColumns: any[];
   exportColumns: any[];
 
   constructor(private myService: MyserviceService) { }
@@ -26,8 +26,8 @@ export class DemoScenarioTableComponent implements OnInit {
   ngOnInit() {
     this.loading = true;
     setTimeout(() => {
-      this.cars = this.myService.fetchMockImpScenarioes();//this.myService.getCarsMedium();
-        this.loading = false;
+      this.cars = this.myService.fetchMockImpScenarioes(); // this.myService.getCarsMedium();
+      this.loading = false;
     }, 5000);
     // this.cars = this.myService.getCarsMedium();//.then(cars => this.cars = cars);
     this.cols = [
@@ -48,7 +48,7 @@ export class DemoScenarioTableComponent implements OnInit {
     // this.multiSortMeta.push({field: 'year', order: 1});
     // this.multiSortMeta.push({field: 'brand', order: -1});
 
-    this._selectedColumns = this.cols;
+    this.selectedColumns = this.cols;
 
     this.exportColumns = this.cols.map(col => ({title: col.header, dataKey: col.field}));
   }
@@ -56,7 +56,7 @@ export class DemoScenarioTableComponent implements OnInit {
 
   onRowSelect(event) {
     // this.messageService.add({severity:'info', summary:'Car Selected', detail:'Vin: ' + event.data.vin});
-    console.log(event)
+    console.log(event);
   }
 
   onRowUnselect(event) {
@@ -113,8 +113,8 @@ export class DemoScenarioTableComponent implements OnInit {
   }
 
   getCars() {
-      let cars = [];
-      for(let car of this.cars) {
+      const cars = [];
+      for (const car of this.cars) {
           // car.year = car.year.toString();
           cars.push(car);
       }

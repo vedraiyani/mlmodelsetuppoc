@@ -11,54 +11,55 @@ import { Scenario } from './domain/scenario';
   providedIn: 'root'
 })
 export class MyserviceService {
-  private _mockdata: any;
+  private mockdata: any;
   constructor() {
-    this._mockdata = MockScenarios
+    this.mockdata = MockScenarios;
   }
 
   fetchMockScenarioes(){
-    return this._mockdata.map((ele,index)=>{
+    return this.mockdata.map((ele, index) => {
         // var obj: {[k: string]: any} = ele;
         // obj.id = index;
         // return obj;
-        ele['index']=index;
+        ele['index'] = index;
         return ele;
       });
   }
 
   fetchMockImpScenarioes(){
-    return <Scenario[]>this._mockdata.map((ele)=>{
-        let scenario:Scenario = {
-          bo : ele["Business Object"],
-          name : ele["Name"],
-          area : ele["Area"],
-          type : ele["Type"],
-          readiness : ele["Readiness"],
-          createdby : ele["Created By"],
-          createdon : ele["Created On"]
+    return this.mockdata as Scenario[];
+    // return this.mockdata.map((ele) => {
+    //     const scenario: Scenario = {
+    //       bo : ele['Business Object'],
+    //       name : ele['Name'],
+    //       area : ele['Area'],
+    //       type : ele['Type'],
+    //       readiness : ele['Readiness'],
+    //       createdby : ele['Created By'],
+    //       createdon : ele['Created On']
 
-        }
-        return scenario;
-      });
+    //     };
+    //     return scenario;
+    //   }) as Scenario[];
   }
 
   fetchModels(name: string){
-    return [...this._mockdata.filter(elem=>elem.Name === name)[0].Models].filter(ele=>ele!=undefined).map((ele,index)=>{
-        ele['index']=index;
+    return [...this.mockdata.filter(elem => elem.name === name)[0].models].filter(ele => ele !== undefined).map((ele, index) => {
+        ele['index'] = index;
         return ele;
       });
   }
 
   async deleteModel(scenario: number, model: number){
-    delete this._mockdata[scenario].Models[model]
+    delete this.mockdata[scenario].models[model];
   }
 
   getCarsSmall() {
-    return <Car[]> CarSmall.data;
+    return CarSmall.data as Car[];
   }
 
   getCarsMedium() {
-    return <Car[]> CarMedium.data;
+    return CarMedium.data as Car[];
   }
 
 }

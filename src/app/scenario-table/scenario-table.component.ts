@@ -10,7 +10,7 @@ import { LazyLoadEvent } from 'primeng/api';
  */
 
 @Component({
-  selector: 'scenario-table',
+  selector: 'app-scenario-table',
   templateUrl: './scenario-table.component.html',
   styleUrls: ['./scenario-table.component.scss']
 })
@@ -21,18 +21,19 @@ export class ScenarioTableComponent implements OnInit {
   multiSortMeta: any[];
   selectedScenario: Scenario;
   loading: boolean;
-  _selectedColumns: any[];
+  selectedColumns: any[];
   exportColumns: any[];
 
   constructor(private myService: MyserviceService) { }
 
   ngOnInit() {
     this.loading = true;
+
     setTimeout(() => {
-      this.scenarios = this.myService.fetchMockImpScenarioes();//this.myService.getCarsMedium();
-        this.loading = false;
+      this.scenarios = this.myService.fetchMockImpScenarioes();
+      this.loading = false;
     }, 5000);
-    // this.cars = this.myService.getCarsMedium();//.then(cars => this.cars = cars);
+
     this.cols = [
       {field: 'name', header: 'Name' },
       { field: 'bo', header: 'BO' },
@@ -41,17 +42,12 @@ export class ScenarioTableComponent implements OnInit {
       { field: 'readiness', header: 'Readiness' },
       {field: 'createdby', header: 'Created By' },
       {field: 'createdon', header: 'Created On' }
-      // { field: 'vin', header: 'Vin' },
-      // {field: 'year', header: 'Year' },
-      // { field: 'brand', header: 'Brand' },
-      // { field: 'color', header: 'Color' }
     ];
+
     this.multiSortMeta = [];
     this.multiSortMeta.push({field: 'name', order: 1});
-    // this.multiSortMeta.push({field: 'year', order: 1});
-    // this.multiSortMeta.push({field: 'brand', order: -1});
 
-    this._selectedColumns = this.cols;
+    this.selectedColumns = this.cols;
 
     this.exportColumns = this.cols.map(col => ({title: col.header, dataKey: col.field}));
   }
@@ -60,7 +56,6 @@ export class ScenarioTableComponent implements OnInit {
   onRowSelect(event) {
     // this.messageService.add({severity:'info', summary:'Car Selected', detail:'Vin: ' + event.data.vin});
     this.selectedScenario = event.data;
-    // console.log(event)
   }
 
   onRowUnselect(event) {
