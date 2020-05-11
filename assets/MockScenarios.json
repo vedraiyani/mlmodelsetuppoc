@@ -1,0 +1,373 @@
+[
+    {
+        "area": "Service",
+        "bo": "Ticket",
+        "createdby": "Prajesh K",
+        "createdon": "28.06.2017 21:00 UTC",
+        "models": [
+            {
+                "accuracy": "0",
+                "createdon": "17.02.2020 23:40 UTC",
+                "datasource": "Auto Extraction",
+                "lastupdated": "11.03.2020 09:47 UTC",
+                "name": "New Ticket Model",
+                "status": "Created",
+                "trainingprogress": "0"
+            },
+            {
+                "accuracy": "0",
+                "createdon": "10.01.2020 00:43 UTC",
+                "datasource": "Auto Extraction",
+                "lastupdated": "01.02.2020 00:48 UTC",
+                "name": "New Model",
+                "status": "Created",
+                "trainingprogress": "0"
+            },
+            {
+                "accuracy": "0",
+                "createdon": "06.01.2020 11:26 UTC",
+                "datasource": "Auto Extraction",
+                "lastupdated": "06.01.2020 11:27 UTC",
+                "name": "fsdfsdf",
+                "status": "Created",
+                "trainingprogress": "0"
+            },
+            {
+                "accuracy": "99",
+                "createdon": "03.10.2019 20:39 UTC",
+                "datasource": "Auto Extraction",
+                "lastupdated": "16.01.2020 20:51 UTC",
+                "name": "Priority with Keywords",
+                "status": "Training Completed",
+                "trainingprogress": "100"
+            },
+            {
+                "accuracy": "87",
+                "createdon": "03.10.2019 18:45 UTC",
+                "datasource": "Auto Extraction",
+                "lastupdated": "16.01.2020 19:53 UTC",
+                "name": "Priority Prediction",
+                "status": "Training Completed",
+                "trainingprogress": "100"
+            },
+            {
+                "accuracy": "82",
+                "createdon": "25.09.2019 22:50 UTC",
+                "datasource": "Auto Extraction",
+                "lastupdated": "11.03.2020 09:47 UTC",
+                "name": "Testing01",
+                "status": "Active",
+                "trainingprogress": "100"
+            },
+            {
+                "accuracy": "0",
+                "createdon": "25.09.2019 18:49 UTC",
+                "datasource": "Auto Extraction",
+                "lastupdated": "03.10.2019 18:54 UTC",
+                "name": "Extractor",
+                "status": "Training In Pending",
+                "trainingprogress": "0"
+            },
+            {
+                "accuracy": "0",
+                "createdon": "17.09.2019 18:57 UTC",
+                "datasource": "Auto Extraction",
+                "lastupdated": "23.09.2019 09:31 UTC",
+                "name": "Priority",
+                "status": "Data Extraction In Progress",
+                "trainingprogress": "0"
+            },
+            {
+                "accuracy": "0",
+                "createdon": "21.08.2019 21:30 UTC",
+                "datasource": "Auto Extraction",
+                "lastupdated": "17.09.2019 09:04 UTC",
+                "name": "Test",
+                "status": "Data Extraction In Progress",
+                "trainingprogress": "0"
+            },
+            {
+                "accuracy": "100",
+                "createdon": "15.07.2019 20:51 UTC",
+                "datasource": "Auto Extraction",
+                "lastupdated": "17.09.2019 17:36 UTC",
+                "name": "Test trainingprogress",
+                "status": "Training Completed",
+                "trainingprogress": "100"
+            },
+            {
+                "accuracy": "99",
+                "createdon": "05.06.2019 20:43 UTC",
+                "datasource": "Auto Extraction",
+                "lastupdated": "03.10.2019 18:55 UTC",
+                "name": "1908 C3 reg test",
+                "status": "Inactive",
+                "trainingprogress": "100"
+            },
+            {
+                "accuracy": "70",
+                "createdon": "25.03.2019 21:41 UTC",
+                "datasource": "File Upload",
+                "lastupdated": "25.03.2019 22:13 UTC",
+                "name": "File upload test",
+                "status": "Inactive",
+                "trainingprogress": "100"
+            },
+            {
+                "accuracy": "0",
+                "createdon": "19.03.2019 05:18 UTC",
+                "datasource": "Auto Extraction",
+                "lastupdated": "19.03.2019 17:21 UTC",
+                "name": "new MAC testing",
+                "status": "Training Failed",
+                "trainingprogress": "0"
+            }
+        ],
+        "name": "Ticket Categorization",
+        "readiness": "View Report",
+        "type": "Classifier"
+    },
+    {
+        "area": "Sales",
+        "bo": "Opportunity",
+        "createdby": "Prajesh K",
+        "createdon": "06.05.2017 18:30 UTC",
+        "models": [],
+        "name": "Opportunity Scoring",
+        "readiness": "View Report",
+        "type": "Scoring"
+    },
+    {
+        "area": "Sales",
+        "bo": "Lead",
+        "createdby": "Dhal Bhagya",
+        "createdon": "07.09.2017 17:02 UTC",
+        "models": [],
+        "name": "Lead Scoring",
+        "readiness": "View Report",
+        "type": "Scoring"
+    },
+    {
+        "area": "Service",
+        "bo": "Ticket",
+        "createdby": "Prajesh K",
+        "createdon": "31.01.2018 23:25 UTC",
+        "models": [
+            {
+                "createdon": "25.06.2019 22:14 UTC",
+                "datasource": "Auto Extraction",
+                "lastupdated": "25.06.2019 22:15 UTC",
+                "name": "1905 c3 testing",
+                "status": "Data Extraction In Progress",
+                "trainingprogress": "0"
+            },
+            {
+                "createdon": "03.06.2019 16:56 UTC",
+                "datasource": "Auto Extraction",
+                "lastupdated": "25.06.2019 22:12 UTC",
+                "name": "1908 C2 reg test_karunya",
+                "status": "Active",
+                "trainingprogress": "100"
+            },
+            {
+                "createdon": "31.05.2019 20:38 UTC",
+                "datasource": "Auto Extraction",
+                "lastupdated": "03.06.2019 16:56 UTC",
+                "name": "test_may31_1908C2",
+                "status": "Data Extraction In Progress",
+                "trainingprogress": "0"
+            },
+            {
+                "createdon": "30.04.2019 17:07 UTC",
+                "datasource": "Auto Extraction",
+                "lastupdated": "03.06.2019 17:10 UTC",
+                "name": "1908 C1 reg test",
+                "status": "Inactive",
+                "trainingprogress": "50"
+            },
+            {
+                "createdon": "19.03.2019 21:47 UTC",
+                "datasource": "Auto Extraction",
+                "lastupdated": "30.04.2019 17:26 UTC",
+                "name": "!905 C2 reg test 3",
+                "status": "Inactive",
+                "trainingprogress": "100"
+            },
+            {
+                "createdon": "19.03.2019 05:29 UTC",
+                "datasource": "Auto Extraction",
+                "lastupdated": "19.03.2019 21:47 UTC",
+                "name": "New Similar ticket Model",
+                "status": "Training Failed",
+                "trainingprogress": "0"
+            },
+            {
+                "createdon": "18.03.2019 18:37 UTC",
+                "datasource": "Auto Extraction",
+                "lastupdated": "19.03.2019 05:29 UTC",
+                "name": "1905 c3 reg test2",
+                "status": "Data Extraction Failed",
+                "trainingprogress": "0"
+            },
+            {
+                "createdon": "12.03.2019 23:43 UTC",
+                "datasource": "Auto Extraction",
+                "lastupdated": "18.03.2019 18:35 UTC",
+                "name": "1905 C3 reg test",
+                "status": "Training In Pending",
+                "trainingprogress": "0"
+            },
+            {
+                "createdon": "04.03.2019 20:37 UTC",
+                "datasource": "Auto Extraction",
+                "lastupdated": "20.03.2019 17:54 UTC",
+                "name": "1905 c2 reg test",
+                "status": "Inactive",
+                "trainingprogress": "100"
+            }
+        ],
+        "name": "Similar Ticket Recommendation",
+        "readiness": "Not Supported",
+        "type": "Recommender"
+    },
+    {
+        "area": "Sales",
+        "bo": "Account",
+        "createdby": "Hui Li",
+        "createdon": "07.12.2017 22:06 UTC",
+        "models": [],
+        "name": "Account Intelligence",
+        "readiness": "Not Supported",
+        "type": "Scoring"
+    },
+    {
+        "area": "Sales",
+        "bo": "Account",
+        "createdby": "Prajesh K",
+        "createdon": "03.02.2018 21:37 UTC",
+        "models": [],
+        "name": "Product Recommendation",
+        "readiness": "Not Supported",
+        "type": "Recommender"
+    },
+    {
+        "area": "Sales",
+        "bo": "Opportunity",
+        "createdby": "Hui Li",
+        "createdon": "20.07.2018 07:28 UTC",
+        "models": [],
+        "name": "Opportunity Closing Date Prediction",
+        "readiness": "Not Supported",
+        "type": "Regression"
+    },
+    {
+        "area": "Service",
+        "bo": "Ticket",
+        "createdby": "CRM OPS",
+        "createdon": "31.01.2019 18:03 UTC",
+        "models": [],
+        "name": "Ticket NLP Classification",
+        "readiness": "Not Supported",
+        "type": "Natural Language Processing"
+    },
+    {
+        "area": "Service",
+        "bo": "Ticket",
+        "createdby": "CRM OPS",
+        "createdon": "22.04.2019 16:52 UTC",
+        "models": [
+            {
+                "createdon": "30.04.2020 05:57 UTC",
+                "datasource": "Auto Extraction",
+                "lastupdated": "30.04.2020 05:57 UTC",
+                "name": "gb",
+                "status": "Created",
+                "trainingprogress": "0"
+            },
+            {
+                "createdon": "30.04.2020 05:53 UTC",
+                "datasource": "Auto Extraction",
+                "lastupdated": "30.04.2020 05:57 UTC",
+                "name": "testing001",
+                "status": "Created",
+                "trainingprogress": "0"
+            },
+            {
+                "createdon": "30.04.2020 05:51 UTC",
+                "datasource": "Auto Extraction",
+                "lastupdated": "30.04.2020 05:53 UTC",
+                "name": "Testing_01",
+                "status": "Created",
+                "trainingprogress": "0"
+            }
+        ],
+        "name": "Email Template Recommendation",
+        "readiness": "View Report",
+        "type": "Recommender"
+    },
+    {
+        "area": "Service",
+        "bo": "Ticket",
+        "createdby": "Arjun Karat",
+        "createdon": "03.05.2019 17:01 UTC",
+        "models": [
+            {
+                "createdon": "29.04.2020 15:50 UTC",
+                "datasource": "Auto Extraction",
+                "lastupdated": "29.04.2020 15:50 UTC",
+                "name": "translation",
+                "status": "Training Completed",
+                "trainingprogress": "0"
+            },
+            {
+                "createdon": "26.04.2020 05:32 UTC",
+                "datasource": "Auto Extraction",
+                "lastupdated": "29.04.2020 15:50 UTC",
+                "name": "test",
+                "status": "Active",
+                "trainingprogress": "0"
+            }
+        ],
+        "name": "Machine Translation",
+        "readiness": "Not Supported",
+        "type": "Natural Language Processing"
+    },
+    {
+        "area": "Service",
+        "bo": "Ticket",
+        "createdby": "Karunya avunuri",
+        "createdon": "23.01.2019 19:27 UTC",
+        "models": [
+            {
+                "accuracy": "0",
+                "createdon": "05.05.2020 05:18 UTC",
+                "datasource": "Auto Extraction",
+                "lastupdated": "05.05.2020 05:18 UTC",
+                "name": "zpg_testinig",
+                "status": "Created",
+                "trainingprogress": "0"
+            },
+            {
+                "accuracy": "0",
+                "createdon": "05.05.2020 04:29 UTC",
+                "datasource": "Auto Extraction",
+                "lastupdated": "05.05.2020 05:18 UTC",
+                "name": "zpg_test2",
+                "status": "Created",
+                "trainingprogress": "0"
+            },
+            {
+                "accuracy": "0",
+                "createdon": "05.05.2020 04:20 UTC",
+                "datasource": "Auto Extraction",
+                "lastupdated": "05.05.2020 04:29 UTC",
+                "name": "zpg_Test",
+                "status": "Created",
+                "trainingprogress": "0"
+            }
+        ],
+        "name": "Ticket Time to Completion",
+        "readiness": "View Report",
+        "type": "Classifier"
+    }
+]
