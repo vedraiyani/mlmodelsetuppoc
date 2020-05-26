@@ -28,12 +28,16 @@
               "src/assets"
             ],
             "styles": [
+              {
+                "input": "node_modules/@progress/kendo-theme-default/dist/all.css"
+              },
               "node_modules/bootstrap/dist/css/bootstrap.min.css",
               "node_modules/primeicons/primeicons.css",
               "node_modules/primeng/resources/themes/nova-light/theme.css",
               "node_modules/primeng/resources/primeng.min.css",
               "src/custom-theme.scss",
-              "src/styles.scss"
+              "src/styles.scss",
+              "node_modules/fundamental-styles/dist/icon.css"
             ],
             "scripts": [
               "node_modules/jquery/dist/jquery.min.js",
@@ -100,6 +104,9 @@
               "src/assets"
             ],
             "styles": [
+              {
+                "input": "node_modules/@progress/kendo-theme-default/dist/all.css"
+              },
               "src/styles.scss"
             ],
             "scripts": []

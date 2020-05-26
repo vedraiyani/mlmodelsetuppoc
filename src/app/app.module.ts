@@ -4,13 +4,19 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
 import { AngularMaterialModule } from './angular-material.module';
 import { PrimeNGModule } from './primeng.module';
+import { KendoModule } from './kendo.module';
 
-import { ScenarioTableComponent } from './scenario-table/scenario-table.component';
+import { FundamentalNGXModule } from './fundamental-ngx.module';
 
 import { MyserviceService } from './myservice.service';
+
+import { ScenarioTableComponent } from './scenario-table/scenario-table.component';
 import { ModelTableComponent } from './model-table/model-table.component';
+
+
 
 @NgModule({
   declarations: [
@@ -23,7 +29,9 @@ import { ModelTableComponent } from './model-table/model-table.component';
     AppRoutingModule,
     BrowserAnimationsModule,
     AngularMaterialModule,
-    PrimeNGModule
+    PrimeNGModule,
+    KendoModule,
+    FundamentalNGXModule
   ],
   providers: [MyserviceService],
   bootstrap: [AppComponent]
