@@ -1,0 +1,86 @@
+<div class="mat-elevation-z8">
+  <div class="table-header-fields">
+    <div class="table-header-titles">
+      Machine Learning Scenarios ({{dataSource&&dataSource.data.length}})
+    </div>
+    <div class="table-header-actions">
+      <mat-form-field>
+        <mat-label><mat-icon>search</mat-icon></mat-label>
+        <input matInput (keyup)="applyFilter($event)" placeholder="Search">
+        <!-- <mat-icon matSuffix>search</mat-icon> -->
+      </mat-form-field>
+      <!-- <button mat-flat-button color="primary">Primary</button> -->
+      <button mat-icon-button color="primary" matTooltip="Sort" aria-label="Sort">
+        <mat-icon>sort</mat-icon>
+      </button>
+      <button mat-button color="primary" aria-label="Run Readiness" [disabled]='selectedRow==undefined'>
+        Run Readiness
+      </button>
+      <!-- <a href="#" mat-icon-button>
+        <mat-icon>refresh</mat-icon>
+      </a> -->
+      <button mat-icon-button color="primary" matTooltip="Refresh" aria-label="Refresh" (click)='refresh()'>
+        <mat-icon>refresh</mat-icon>
+      </button>
+      <button mat-icon-button color="primary" matTooltip="ML Documentation" aria-label="ML Documentation" (click)='openMLDocumentation()'> <!--onclick="window.open('http://www.example.com','_blank')"> -->
+        <mat-icon>help_outline</mat-icon>
+      </button>
+    </div>
+  </div>
+
+  <table mat-table [dataSource]="dataSource" matSort matSortActive="Created On" matSortDirection="desc" matSortDisableClear>
+
+    <!-- BO Column -->
+    <ng-container matColumnDef="bo">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> Business Object </th>
+      <td mat-cell *matCellDef="let element"> {{element.bo}} </td>
+    </ng-container>
+
+    <!-- Name Column -->
+    <ng-container matColumnDef="name">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> Name </th>
+      <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+    </ng-container>
+
+    <!-- Area Column -->
+    <ng-container matColumnDef="area">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> Area </th>
+      <td mat-cell *matCellDef="let element"> {{element.area}} </td>
+    </ng-container>
+
+    <!-- Type Column -->
+    <ng-container matColumnDef="type">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> Type </th>
+      <td mat-cell *matCellDef="let element"> {{element.type}} </td>
+    </ng-container>
+
+    <!-- Readiness Column -->
+    <ng-container matColumnDef="readiness">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> Readiness </th>
+      <td mat-cell *matCellDef="let element"> {{element.readiness}} </td>
+    </ng-container>
+
+    <!-- Created By Column -->
+    <ng-container matColumnDef="createdby">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> Created By </th>
+      <td mat-cell *matCellDef="let element"> {{element.createdby}} </td>
+    </ng-container>
+
+    <!-- Created On Column -->
+    <ng-container matColumnDef="createdon">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> Created On </th>
+      <td mat-cell *matCellDef="let element"> {{element.createdon}} </td>
+    </ng-container>
+
+    <!-- <tr mat-header-row *matHeaderRowDef="displayedColumns; sticky: true"></tr> -->
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;" [ngClass]="{'highlight': (selectedRow!=undefined && selectedRow.index == row.index)}"
+         (click)="highlight(row)"></tr>
+  </table>
+
+  <mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons></mat-paginator>
+</div>
+<app-model-table *ngIf="selectedRow!=undefined" [Scenario]="selectedRow">
+  <mat-spinner></mat-spinner>
+</app-model-table>
+<!-- <table-model [Scenario]="selectedRow">loading2</table-model> -->

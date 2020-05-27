@@ -15,6 +15,9 @@ import { MyserviceService } from './myservice.service';
 
 import { ScenarioTableComponent } from './scenario-table/scenario-table.component';
 import { ModelTableComponent } from './model-table/model-table.component';
+import { FundamentalNgxComponent } from './scenario-table/fundamental-ngx/fundamental-ngx.component';
+import { PrimengComponent } from './scenario-table/primeng/primeng.component';
+import { MaterialComponent } from './scenario-table/material/material.component';
 
 
 
@@ -22,7 +25,10 @@ import { ModelTableComponent } from './model-table/model-table.component';
   declarations: [
     AppComponent,
     ScenarioTableComponent,
-    ModelTableComponent
+    ModelTableComponent,
+    FundamentalNgxComponent,
+    PrimengComponent,
+    MaterialComponent
   ],
   imports: [
     BrowserModule,
