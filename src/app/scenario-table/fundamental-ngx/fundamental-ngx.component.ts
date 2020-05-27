@@ -9,9 +9,9 @@ import { MyserviceService } from '../../myservice.service';
 export class FundamentalNgxComponent implements OnInit {
 
   tableRows;
-  column1SortDir: string = 'none';
-  dateSortDir: string = 'none';
-  cols:any[];
+  // column1SortDir: string = 'none';
+  // dateSortDir: string = 'none';
+  cols: any[];
 
   constructor(private myService: MyserviceService) { }
   ngOnInit() {
@@ -63,47 +63,48 @@ export class FundamentalNgxComponent implements OnInit {
     //         type: 'search'
     //     }
     // ];
-}
+  }
+
   sortColumn1() {
-      this.dateSortDir = 'none';
-      if (this.column1SortDir === 'asc') {
-          this.column1SortDir = 'dsc';
-          this.tableRows.sort((val1, val2) => {
-              if (val1.column1 < val2.column1) {
-                  return -1;
-              } else if (val1.column1 > val2.column1) {
-                  return 1;
-              } else {
-                  return 0;
-              }
-          });
-      } else if (this.column1SortDir === 'none' || this.column1SortDir === 'dsc') {
-          this.column1SortDir = 'asc';
-          this.tableRows.sort((val1, val2) => {
-              if (val1.column1 > val2.column1) {
-                  return -1;
-              } else if (val1.column1 < val2.column1) {
-                  return 1;
-              } else {
-                  return 0;
-              }
-          });
-      }
+      // this.dateSortDir = 'none';
+      // if (this.column1SortDir === 'asc') {
+      //     this.column1SortDir = 'dsc';
+      //     this.tableRows.sort((val1, val2) => {
+      //         if (val1.column1 < val2.column1) {
+      //             return -1;
+      //         } else if (val1.column1 > val2.column1) {
+      //             return 1;
+      //         } else {
+      //             return 0;
+      //         }
+      //     });
+      // } else if (this.column1SortDir === 'none' || this.column1SortDir === 'dsc') {
+      //     this.column1SortDir = 'asc';
+      //     this.tableRows.sort((val1, val2) => {
+      //         if (val1.column1 > val2.column1) {
+      //             return -1;
+      //         } else if (val1.column1 < val2.column1) {
+      //             return 1;
+      //         } else {
+      //             return 0;
+      //         }
+      //     });
+      // }
   }
 
   sortDate() {
-      this.column1SortDir = 'none';
-      if (this.dateSortDir === 'asc') {
-          this.dateSortDir = 'dsc';
-          this.tableRows.sort((val1, val2) => {
-              return +new Date(val1.date) - +new Date(val2.date);
-          });
-      } else if (this.dateSortDir === 'none' || this.dateSortDir === 'dsc') {
-          this.dateSortDir = 'asc';
-          this.tableRows.sort((val1, val2) => {
-              return +new Date(val2.date) - +new Date(val1.date);
-          });
-      }
+      // this.column1SortDir = 'none';
+      // if (this.dateSortDir === 'asc') {
+      //     this.dateSortDir = 'dsc';
+      //     this.tableRows.sort((val1, val2) => {
+      //         return +new Date(val1.date) - +new Date(val2.date);
+      //     });
+      // } else if (this.dateSortDir === 'none' || this.dateSortDir === 'dsc') {
+      //     this.dateSortDir = 'asc';
+      //     this.tableRows.sort((val1, val2) => {
+      //         return +new Date(val2.date) - +new Date(val1.date);
+      //     });
+      // }
   }
 
 }

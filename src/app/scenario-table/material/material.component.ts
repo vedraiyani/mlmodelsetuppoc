@@ -13,7 +13,7 @@ import { MyserviceService } from '../../myservice.service';
 export class MaterialComponent implements OnInit {
 
   displayedColumns: string[];
-  dataSource : MatTableDataSource<any>;
+  dataSource: MatTableDataSource<any>;
   selectedRow: any;
 
   @ViewChild(MatPaginator, {static: true}) paginator: MatPaginator;
@@ -44,7 +44,7 @@ export class MaterialComponent implements OnInit {
   }
 
   openMLDocumentation(){
-    let url: string = 'http://219.90.67.154/report-service/quicktask/TCPDF/examples/test-tcpdf.php?loggedinuser=';
+    const url = 'http://219.90.67.154/report-service/quicktask/TCPDF/examples/test-tcpdf.php?loggedinuser=';
     window.open(url, '_blank');
   }
 }

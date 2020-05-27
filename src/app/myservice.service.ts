@@ -21,7 +21,7 @@ export class MyserviceService {
         // var obj: {[k: string]: any} = ele;
         // obj.id = index;
         // return obj;
-        ele['index'] = index;
+        ele['index'] = index; // tslint:disable-line
         return ele;
       });
   }
@@ -45,7 +45,7 @@ export class MyserviceService {
 
   fetchModels(name: string){
     return [...this.mockdata.filter(elem => elem.name === name)[0].models].filter(ele => ele !== undefined).map((ele, index) => {
-        ele['index'] = index;
+        ele['index'] = index; // tslint:disable-line
         return ele;
       });
   }

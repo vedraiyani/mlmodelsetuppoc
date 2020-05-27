@@ -8,7 +8,7 @@
     "build": "ng build",
     "predeploy": "ng build --prod --base-href mlmodelsetuppoc",
     "deploy": "gh-pages -d dist/mlmodelsetuppoc",
-    "deploy:cf": "npm run predeploy && deploycf.cmd",
+    "deploy:cf": "ng build --prod && deploycf.cmd",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"
