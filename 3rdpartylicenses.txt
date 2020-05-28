@@ -94,7 +94,19 @@ MIT
 @angular/router
 MIT
 
+@clr/angular
+MIT
+
+@clr/icons
+MIT
+
+@clr/ui
+MIT
+
 @fundamental-ngx/core
+Apache-2.0
+
+@luigi-project/client
 Apache-2.0
 
 @progress/kendo-angular-buttons
