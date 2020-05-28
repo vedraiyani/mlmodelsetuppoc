@@ -18,6 +18,8 @@ import { ModelTableComponent } from './model-table/model-table.component';
 import { FundamentalNgxComponent } from './scenario-table/fundamental-ngx/fundamental-ngx.component';
 import { PrimengComponent } from './scenario-table/primeng/primeng.component';
 import { MaterialComponent } from './scenario-table/material/material.component';
+import { ClarityModule } from '@clr/angular';
+import { ClarityComponent } from './scenario-table/clarity/clarity.component';
 
 
 
@@ -28,7 +30,8 @@ import { MaterialComponent } from './scenario-table/material/material.component'
     ModelTableComponent,
     FundamentalNgxComponent,
     PrimengComponent,
-    MaterialComponent
+    MaterialComponent,
+    ClarityComponent
   ],
   imports: [
     BrowserModule,
@@ -37,7 +40,8 @@ import { MaterialComponent } from './scenario-table/material/material.component'
     AngularMaterialModule,
     PrimeNGModule,
     KendoModule,
-    FundamentalNGXModule
+    FundamentalNGXModule,
+    ClarityModule
   ],
   providers: [MyserviceService],
   bootstrap: [AppComponent]
