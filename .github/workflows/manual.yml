@@ -17,3 +17,8 @@ jobs:
     - run: |
         echo "Hello ${{ github.event.inputs.name }}!"
         echo "- in ${{ github.event.inputs.home }}!"
+    - name: Setup
+      uses: actions/setup-node@latest
+      run: |
+        npm install
+        npm run test
